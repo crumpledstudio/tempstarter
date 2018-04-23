@@ -19,7 +19,6 @@ const http = require('http').Server(app);
 const io = require('socket.io')(http);
 
 
-
 mongoose.connect(config.database, function(err) {
   if (err) console.log(err);
   console.log("Connected to the database");
