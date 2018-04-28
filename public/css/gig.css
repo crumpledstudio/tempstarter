@@ -154,8 +154,10 @@
 .single-order-package-card {
   background-color: #fff;
   width: 500px;
-  height: 700px;
+  height: auto;
   border: 1px #e5e5e5 solid;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .space-between h4, h3 {
