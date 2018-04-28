@@ -13,9 +13,22 @@
                 <div class="overview">
                     <div class="list-orders-card">
                         <div class="table-margin">
-
-
-                            
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Gig</th>
+                                        <th>Title</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each gigs}}
+                                    <tr>
+                                        <td><img src="{{picture}}" class="order-image-my-gig"></td>
+                                        <td>{{title}}</td>
+                                    </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

@@ -6,7 +6,10 @@ const User = require('../models/user');
 
 
 router.get('/', (req, res, next) => {
-    res.render('main/home');
+
+    Gig.find({}, function(err, gigs) {
+        res.render('main/home', { gigs: gigs });
+    })
 });
 
 router.get('/my-gigs', (req, res, next) => {
@@ -45,6 +48,16 @@ router.route('/add-new-gig')
             )
         }
     ]);
+});
+
+
+
+router.get('/service_detail/:id', (req,res,next) => {
+    Gig.findOne({ _id: req.params.id })
+    .populate('owner')
+    .exec(function(err,gig) {
+        res.render('main/service_detail', { gig: gig});
+    });
 });
 
 
